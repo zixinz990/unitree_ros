@@ -34,7 +34,7 @@ int main(int argc, char **argv)
     {
         model_state_pub.pose.position.x = 0.0;
         model_state_pub.pose.position.y = 0.0;
-        model_state_pub.pose.position.z = 0.5;
+        model_state_pub.pose.position.z = 0.325;
         
         model_state_pub.pose.orientation.x = 0.0;
         model_state_pub.pose.orientation.y = 0.0;
@@ -49,9 +49,9 @@ int main(int argc, char **argv)
         tf::Quaternion q;
         while(ros::ok())
         {
-            model_state_pub.pose.position.x = radius * sin(2*M_PI*(double)time_ms/period);
-            model_state_pub.pose.position.y = radius * cos(2*M_PI*(double)time_ms/period);
-            model_state_pub.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0, 0, - 2*M_PI*(double)time_ms/period);
+            model_state_pub.pose.position.x = 0.0;
+            model_state_pub.pose.position.y = 0.0;
+            model_state_pub.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0.0, 0.0, 0.0);
 
             move_publisher.publish(model_state_pub);
             loop_rate.sleep();
@@ -76,5 +76,4 @@ int main(int argc, char **argv)
             loop_rate.sleep();
         }
     }
-    
 }
