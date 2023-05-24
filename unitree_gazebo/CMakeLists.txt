@@ -53,5 +53,3 @@ target_link_libraries(unitreeDrawForcePlugin ${catkin_LIBRARIES} ${GAZEBO_LIBRAR
 
 # add_executable(unitree_servo src/exe/servo.cpp)
 # target_link_libraries(unitree_servo ${PROJECT_NAME} ${catkin_LIBRARIES})
-
-
