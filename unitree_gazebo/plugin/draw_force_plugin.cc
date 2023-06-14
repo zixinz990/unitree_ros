@@ -71,9 +71,9 @@ namespace gazebo
 
         void GetForceCallback(const geometry_msgs::WrenchStamped & msg)
         {
-            Fx = msg.wrench.force.x/20.0;
-            Fy = msg.wrench.force.y/20.0;
-            Fz = msg.wrench.force.z/20.0;
+            Fx = msg.wrench.force.x/5.0;
+            Fy = msg.wrench.force.y/5.0;
+            Fz = msg.wrench.force.z/5.0;
             // Fx = msg.wrench.force.x;
             // Fy = msg.wrench.force.y;
             // Fz = msg.wrench.force.z;
