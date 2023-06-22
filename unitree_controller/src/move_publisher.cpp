@@ -51,7 +51,7 @@ int main(int argc, char **argv)
         {
             model_state_pub.pose.position.x = 0.0;
             model_state_pub.pose.position.y = 0.0;
-            model_state_pub.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0.0, -3.1416/2, 0.0);
+            model_state_pub.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(3.1416/2, -3.1416/2, 0.0);
 
             move_publisher.publish(model_state_pub);
             loop_rate.sleep();

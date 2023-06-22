@@ -41,7 +41,7 @@
         <model name="static_environment">
         <static>true</static>
             <link name="static_box_1">
-                <pose>0 0.68 0.5 0 0 0</pose>
+                <pose>0 0.82 0.5 0 0 0</pose>
                 <collision name="static_box_collision_1">
                     <geometry>
                         <box>
@@ -63,7 +63,7 @@
             </link>
 
             <link name="static_box_2">
-                <pose>0 -0.68 0.5 0 0 0</pose>
+                <pose>0 -0.82 0.5 0 0 0</pose>
                 <collision name="static_box_collision_2">
                     <geometry>
                         <box>
