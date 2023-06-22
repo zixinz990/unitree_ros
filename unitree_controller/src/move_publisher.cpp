@@ -34,7 +34,7 @@ int main(int argc, char **argv)
     {
         model_state_pub.pose.position.x = 0.0;
         model_state_pub.pose.position.y = 0.0;
-        model_state_pub.pose.position.z = 0.325;
+        model_state_pub.pose.position.z = 0.7;
         
         model_state_pub.pose.orientation.x = 0.0;
         model_state_pub.pose.orientation.y = 0.0;
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
         {
             model_state_pub.pose.position.x = 0.0;
             model_state_pub.pose.position.y = 0.0;
-            model_state_pub.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0.0, 0.0, 0.0);
+            model_state_pub.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0.0, -3.1416/2, 0.0);
 
             move_publisher.publish(model_state_pub);
             loop_rate.sleep();
@@ -60,13 +60,13 @@ int main(int argc, char **argv)
     }
     else if(def_frame == coord::ROBOT)
     {
-        model_state_pub.twist.linear.x= 0.02; //0.02: 2cm/sec
-        model_state_pub.twist.linear.y= 0.0;
-        model_state_pub.twist.linear.z= 0.08;
+        model_state_pub.twist.linear.x = 0.02; //0.02: 2cm/sec
+        model_state_pub.twist.linear.y = 0.0;
+        model_state_pub.twist.linear.z = 0.08;
         
-        model_state_pub.twist.angular.x= 0.0;
-        model_state_pub.twist.angular.y= 0.0;
-        model_state_pub.twist.angular.z= 0.0;
+        model_state_pub.twist.angular.x = 0.0;
+        model_state_pub.twist.angular.y = 0.0;
+        model_state_pub.twist.angular.z = 0.0;
 
         model_state_pub.reference_frame = "base";
 
