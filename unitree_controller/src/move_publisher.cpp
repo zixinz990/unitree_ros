@@ -34,7 +34,7 @@ int main(int argc, char **argv)
     {
         model_state_pub.pose.position.x = 0.0;
         model_state_pub.pose.position.y = 0.0;
-        model_state_pub.pose.position.z = 0.325;
+        model_state_pub.pose.position.z = 0.3;
         
         model_state_pub.pose.orientation.x = 0.0;
         model_state_pub.pose.orientation.y = 0.0;
