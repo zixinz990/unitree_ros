@@ -78,10 +78,11 @@ int main(int argc, char **argv)
         // Generate random orientation
         double roll = random_double(-M_PI, M_PI);
         double pitch = random_double(-M_PI, M_PI);
+        double yaw = random_double(-M_PI, M_PI);
 
         model_state_pub.reference_frame = "world";
         tf::Quaternion q;
-        model_state_pub.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(roll, pitch, 0.0);
+        model_state_pub.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(roll, pitch, yaw);
 
         // Get the best falling orientation
         double z0 = model_state_pub.pose.orientation.z;
