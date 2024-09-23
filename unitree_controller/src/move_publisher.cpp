@@ -80,6 +80,11 @@ int main(int argc, char **argv)
         double pitch = random_double(-M_PI, M_PI);
         double yaw = random_double(-M_PI, M_PI);
 
+        std::cout << "Random initial attitude" << std::endl;
+        std::cout << "Roll: " << roll << std::endl;
+        std::cout << "Pitch: " << pitch << std::endl;
+        std::cout << "Yaw: " << yaw << std::endl;
+
         model_state_pub.reference_frame = "world";
         tf::Quaternion q;
         model_state_pub.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(roll, pitch, yaw);
@@ -90,7 +95,7 @@ int main(int argc, char **argv)
         double z_tgt = z0 / sqrt(z0 * z0 + w0 * w0);
         double w_tgt = w0 / sqrt(z0 * z0 + w0 * w0);
         tgt_pose.orientation.z = z_tgt;
-        tgt_pose.orientation.w = w_tgt;        
+        tgt_pose.orientation.w = w_tgt;
 
         while (ros::ok())
         {

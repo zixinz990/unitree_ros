@@ -3,7 +3,7 @@
     <world name="default">
         <gui>
             <camera name="my_camera">
-                <pose>4.0 4.0 2.0 0.0 0.2 -2.356</pose>
+                <pose>2.0 2.0 1.0 0.0 0.2 -2.356</pose>
                 <projection_type>perspective</projection_type>
             </camera>
         </gui>
